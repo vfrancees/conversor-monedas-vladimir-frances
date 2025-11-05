@@ -16,7 +16,7 @@ import java.util.*;
 
 public class ExchangeRateClient {
 
-    private static final String BASE_URL = "https://api.frankfurter.app/latest";
+    private static final String BASE_URL = "https://open.er-api.com/v6/latest";
     private final HttpClient http;
     private final Gson gson = new Gson();
 
