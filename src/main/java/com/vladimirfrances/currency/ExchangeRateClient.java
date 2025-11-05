@@ -16,7 +16,8 @@ import java.util.*;
 
 public class ExchangeRateClient {
 
-    private static final String BASE_URL = "https://api.exchangerate.host/latest";
+    private static final String BASE_URL = "https://api.exchangerate-api.com/v4/latest";
+
     private final HttpClient http;
     private final Gson gson = new Gson();
 
