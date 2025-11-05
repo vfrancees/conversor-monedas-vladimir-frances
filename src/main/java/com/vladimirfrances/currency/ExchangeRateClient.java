@@ -23,7 +23,7 @@ public class ExchangeRateClient {
     public ExchangeRateClient() {
         this.http = HttpClient.newBuilder()
                 .connectTimeout(Duration.ofSeconds(10))
-                .followRedirects(HttpClient.Redirect.NORMAL) // por si acaso
+                .followRedirects(HttpClient.Redirect.NORMAL) 
                 .build();
     }
 
