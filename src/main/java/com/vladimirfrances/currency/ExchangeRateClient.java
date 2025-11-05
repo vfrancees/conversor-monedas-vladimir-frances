@@ -31,6 +31,7 @@ public class ExchangeRateClient {
         String symbols = String.join(",", sanitize(targets));
         String url = BASE_URL + "?base=" + encode(base) + (symbols.isEmpty() ? "" : "&symbols=" + encode(symbols));
 
+
         HttpRequest req = HttpRequest.newBuilder()
                 .uri(URI.create(url))
                 .timeout(Duration.ofSeconds(20))
