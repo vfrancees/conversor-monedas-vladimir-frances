@@ -16,21 +16,22 @@ import java.util.*;
 
 public class ExchangeRateClient {
 
-    private static final String BASE_URL = "https://api.exchangerate-api.com/v4/latest";
-
+    private static final String BASE_URL = "https://api.frankfurter.app/latest";
     private final HttpClient http;
     private final Gson gson = new Gson();
 
     public ExchangeRateClient() {
         this.http = HttpClient.newBuilder()
                 .connectTimeout(Duration.ofSeconds(10))
+                .followRedirects(HttpClient.Redirect.NORMAL) // por si acaso
                 .build();
     }
 
     public Map<String, Double> fetchRates(String base, List<String> targets) throws IOException, InterruptedException {
         String symbols = String.join(",", sanitize(targets));
-        String url = BASE_URL + "?base=" + encode(base) + (symbols.isEmpty() ? "" : "&symbols=" + encode(symbols));
-
+        String url = BASE_URL
+                + "?from=" + encode(base)
+                + (symbols.isEmpty() ? "" : "&to=" + encode(symbols));
 
         HttpRequest req = HttpRequest.newBuilder()
                 .uri(URI.create(url))
