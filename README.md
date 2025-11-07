@@ -2,7 +2,7 @@
 
 Proyecto del desafío: **consumo de API, JSON y filtrado de monedas** en Java.
 
-## APP
+## App usada
 - Java 17
 - Maven
 - Gson (parseo JSON)
@@ -19,7 +19,7 @@ mvn -q -DskipTests package
 java -jar target/conversor-monedas-1.0.0-shaded.jar
 ```
 
-## como usarlo
+## Como usarlo
 1. Ingresa la **moneda base** (ej: `USD`, `EUR`, `DOP`).
 2. Ingresa el **monto**.
 3. Lista las **monedas destino** separadas por coma (o deja vacío para sugeridas: `USD,EUR,DOP,MXN,COP,ARS,BRL`).
@@ -41,13 +41,13 @@ Resultados:
 
 > Si la API está temporalmente inalcanzable, verás un mensaje de error de red.
 
-##  pruebas
+##  Pruebas
 Ejecuta:
 ```bash
 mvn test
 ```
 
-## estructura
+## Estructura
 ```
 conversor-monedas-vladimir-frances/
 ├─ pom.xml
@@ -61,7 +61,7 @@ conversor-monedas-vladimir-frances/
 └─ README.md
 ```
 
-## trello (flujo agil sugerido)
+## Trello (flujo agil sugerido)
 - **Listos para iniciar**: crear proyecto Maven, configurar dependencias, README, `.gitignore`.
 - **En desarrollo**: cliente HTTP, parseo JSON, UI de consola, validaciones.
 - **Pausado**: tareas con bloqueo externo (p. ej. sin internet).
@@ -76,5 +76,5 @@ Checklist (copiar en una tarjeta):
 - [ ] README con uso y demo
 - [ ] Publicado en GitHub y compartido en LinkedIn
 
-## licencia
+## Licencia
 MIT © 2025 Vladimir Frances
